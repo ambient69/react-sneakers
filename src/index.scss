@@ -115,6 +115,7 @@ header {
   .items {
     flex: 1;
     overflow: auto;
+    margin-bottom: 40px;
   }
 }
 
@@ -144,7 +145,7 @@ header {
       position: absolute;
       right: 30px;
       top: 20px;
-      transition: all 0.15 s ease-in-out;
+      transition: all 0.2s ease-in-out;
     }
     &:hover {
       img {
