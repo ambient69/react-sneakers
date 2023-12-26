@@ -1,50 +1,52 @@
-import Card from '../components/Card';
-import React from 'react';
+import Card from "../components/Card/Card";
 
 function Home({
   items,
   searchValue,
   setSearchValue,
-  onChangeValueInput,
-  onAddtoCarts,
-  onAddtoFavorites,
-  isLoading,
+  onChangeSearchInput,
+  onAddtoCart,
+  onFavorite,
 }) {
-  const renderItems = () => {
-    const filtredItems = items.filter((item) =>
-      item.title.toLowerCase().includes(searchValue.toLowerCase()),
-    );
-    return (isLoading ? [...Array(8)] : filtredItems).map((item, index) => (
-      <Card
-        key={index}
-        onPlus={(obj) => onAddtoCarts(obj)}
-        onFavorite={(obj) => onAddtoFavorites(obj)}
-        loading={isLoading}
-        {...item}
-      />
-    ));
-  };
-
   return (
     <div className="content p-40">
-      <div className="d-flex align-center mb-40 justify-between">
-        <h1 className="contentHeading">
-          {searchValue ? `Поиск по фильтру: ${searchValue}` : 'Все кроссовки'}
+      <div className="d-flex justify-between align-center mb-40">
+        <h1>
+          {searchValue ? `Поиск по запросу: "${searchValue}"` : "Все кроссовки"}
         </h1>
-        <div className="search-block d-flex align-center">
-          <img className="ml-10" src="/img/search.svg" alt="search" width={14} height={14} />
+        <div className="search-block d-flex">
+          <img src="/img/search.svg" alt="Поиск" />
           {searchValue && (
             <img
-              src="/img/btn-remove.svg"
-              onClick={() => setSearchValue('')}
-              alt=""
-              className="clear cu-p"
+              onClick={() => {
+                setSearchValue("");
+              }}
+              className="clear"
+              src="/img/remove-sneakers.svg"
+              alt="Отчистка инпута"
             />
           )}
-          <input onChange={onChangeValueInput} value={searchValue} placeholder="Поиск..." />
+          <input
+            value={searchValue}
+            onChange={onChangeSearchInput}
+            placeholder="Поиск..."
+          ></input>
         </div>
       </div>
-      <div className="d-flex flex-wrap">{renderItems()}</div>
+      <div className="cardTable d-flex flex-wrap">
+        {items
+          .filter((item) =>
+            item.title.toLowerCase().includes(searchValue.toLowerCase())
+          )
+          .map((item, index) => (
+            <Card
+              key={index}
+              onPlus={onAddtoCart}
+              onFavorite={onFavorite}
+              {...item}
+            />
+          ))}
+      </div>
     </div>
   );
 }

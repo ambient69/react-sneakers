@@ -1,0 +1,45 @@
+.favorites {
+  padding: 40px;
+  min-height: 77vh;
+
+  .cardTable {
+    gap: 30px 40px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin: 0 0 40px 21px;
+  }
+
+  a {
+    height: fit-content;
+    transition: transform 0.2s linear;
+
+    &:hover {
+      transform: translateX(-5px);
+      opacity: 0.7;
+
+    }
+
+  }
+
+  .emptyBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 65vh;
+
+    h3 {
+      margin: 30px auto 11px;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 auto 40px;
+      opacity: 0.4;
+    }
+  }
+}
