@@ -1,0 +1,25 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 45px;
+    border-bottom: 1px solid #EAEAEA;
+
+    @media (max-width: 896px) {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px;
+    }
+
+    @media (max-width: 1024px) {
+        padding: 35px;
+    }
+}
+
+.logo {
+    &>img {
+        max-width: 100%;
+        height: auto;
+    }
+}

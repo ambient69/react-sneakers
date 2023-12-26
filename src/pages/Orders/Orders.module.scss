@@ -17,15 +17,8 @@
     }
 }
 
-.favorites {
+.orders {
     padding: 45px;
-    height: 100%;
-    flex: 1;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 
     @media (max-width: 1024px) {
         padding: 35px;
@@ -37,15 +30,5 @@
 
     @media (max-width: 596px) {
         padding: 15px;
-    }
-}
-
-.empty {
-    display: flex;
-    flex-direction: column;
-    gap: 70px;
-
-    @media (max-width: 425px) {
-        padding-top: 100px;
     }
 }

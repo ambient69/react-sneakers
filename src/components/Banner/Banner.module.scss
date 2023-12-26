@@ -1,0 +1,23 @@
+.item {
+    width: 100%;
+
+    &>img {
+        border-radius: 20px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.slider {
+    z-index: 1;
+    &>img {
+        width: auto;
+        height: auto;
+        z-index: 2;
+
+        @media (max-width: 768px) {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+}

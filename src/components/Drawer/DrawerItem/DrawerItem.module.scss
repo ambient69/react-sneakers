@@ -1,0 +1,47 @@
+.item {
+    border: 1px solid #F3F3F3;
+    padding: 20px;
+    border-radius: 20px;
+
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: 596px) {
+        padding: 15px;
+    }
+}
+
+.img {
+    max-width: 70px;
+    &>img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.title {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+}
+
+.price {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+}
+
+.btn {
+    background-color: transparent;
+    align-self: flex-end;
+}

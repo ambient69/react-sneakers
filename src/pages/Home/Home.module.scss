@@ -1,0 +1,46 @@
+.home {
+    padding: 45px;
+
+    @media (max-width: 1024px) {
+        padding: 35px;
+    }
+
+    @media (max-width: 896px) {
+        padding: 25px;
+    }
+}
+
+.content {
+    margin-top: 40px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        &>div {
+            width: 100%;
+        }
+    }
+    
+}
+
+.title {
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0em;
+
+    @media (max-width: 1024px) {
+        font-size: 28px;
+    }
+
+    @media (max-width: 896px) {
+        font-size: 24px;
+    }
+}

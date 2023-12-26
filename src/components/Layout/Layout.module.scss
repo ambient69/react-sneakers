@@ -1,0 +1,17 @@
+.wrapper {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    max-width: 1080px;
+    margin: 0 auto;
+
+    @media (max-width: 425px) {
+        border-radius: 0px;
+        display: flex;
+        flex: 1 1;
+    }
+}
